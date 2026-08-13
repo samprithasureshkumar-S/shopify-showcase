@@ -1,0 +1,134 @@
+/* Tablet: ~1024px and below */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .component-map__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Small tablet / large mobile: ~768px and below */
+@media (max-width: 768px) {
+  .showcase-header__bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .showcase-nav {
+    gap: var(--space-sm) var(--space-md);
+  }
+
+  .brand-hero,
+  .editorial-split {
+    grid-template-columns: 1fr;
+  }
+
+  .editorial-split--reverse {
+    direction: ltr;
+  }
+
+  .editorial-split__copy {
+    order: 2;
+  }
+
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+  }
+
+  .feature-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .component-map__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-lg);
+  }
+}
+
+/* Mobile: ~390px and below */
+@media (max-width: 480px) {
+  .container,
+  .showcase-hero,
+  .reference-block__intro,
+  .category-grid,
+  .product-grid,
+  .collection-scroll,
+  .collection-section__head,
+  .editorial-split,
+  .feature-grid,
+  .testimonial,
+  .newsletter,
+  .component-map__grid,
+  .workflow,
+  .site-footer__grid,
+  .site-header__bar,
+  .brand-hero {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+
+  .showcase-hero h1 {
+    max-width: none;
+  }
+
+  .site-header__bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-sm);
+  }
+
+  .site-header__nav {
+    gap: var(--space-sm) var(--space-md);
+  }
+
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter__form {
+    flex-direction: column;
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  .workflow__steps {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .workflow__arrow {
+    text-align: center;
+  }
+}
