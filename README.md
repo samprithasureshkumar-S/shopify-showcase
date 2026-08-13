@@ -15,12 +15,6 @@ International reference. Clean, editorial beauty storefront.
 **VAHDAM India** — https://www.vahdam.in/
 Indian reference. Premium, natural, direct-sourced tea storefront.
 
-## Presentation Reference
-
-Used only for presentation quality/style inspiration (simplicity, section organization, readability) — no
-code, text, or assets were copied from it:
-
-https://madhusudhan1206.github.io/shopify-showcase/
 
 ## Objective
 
