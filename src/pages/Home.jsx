@@ -1,4 +1,5 @@
 import AnnouncementBar from '../components/shared/AnnouncementBar.jsx'
+import ComponentLabel from '../components/shared/ComponentLabel.jsx'
 import SectionHeader from '../components/shared/SectionHeader.jsx'
 import FeatureGrid from '../components/shared/FeatureGrid.jsx'
 import Newsletter from '../components/shared/Newsletter.jsx'
@@ -94,24 +95,41 @@ function Home() {
             </p>
           </div>
 
+          <ComponentLabel name="IliaHeader" note="Logo, category navigation, search + account + bag" />
           <IliaHeader />
+
+          <ComponentLabel name="AnnouncementBar" note="Rotating promotional message strip (shared)" />
           <AnnouncementBar messages={iliaAnnouncement} style={{ borderColor: 'var(--ilia-border)' }} />
 
           <div className="page-section">
+            <ComponentLabel name="IliaHero" note="Single featured-product hero with primary CTA" />
             <IliaHero />
           </div>
 
           <div className="page-section page-section--tight">
             <div style={{ padding: '0 var(--space-lg)', maxWidth: 'var(--max-width)', margin: '0 auto' }}>
+              <ComponentLabel name="SectionHeader" note="Eyebrow + heading + description block (shared)" />
               <SectionHeader eyebrow="Shop by Category" title="Six entry points into the current edit" />
             </div>
+            <ComponentLabel
+              name="IliaCategoryNav"
+              note="Six-tile category grid — renders shared CategoryTile, PlaceholderImage"
+            />
             <IliaCategoryNav />
           </div>
 
           <div className="page-section">
+            <ComponentLabel
+              name="IliaProductShowcase"
+              note="Curated four-product grid — renders shared ProductCard, PlaceholderImage, Badge, Rating, Button"
+            />
             <IliaProductShowcase />
           </div>
 
+          <ComponentLabel
+            name="IliaEditorialSplit"
+            note="Split image/copy editorial block (shown twice) — renders shared PlaceholderImage, Button"
+          />
           {iliaEditorial.map((block) => (
             <IliaEditorialSplit key={block.title} {...block} />
           ))}
@@ -120,11 +138,14 @@ function Home() {
             <div style={{ padding: '0 var(--space-lg)', maxWidth: 'var(--max-width)', margin: '0 auto' }}>
               <SectionHeader eyebrow="Brand Values" title="Commitments carried across every launch" />
             </div>
+            <ComponentLabel name="FeatureGrid" note="Icon + title + description grid (shared)" />
             <FeatureGrid items={iliaValues} />
           </div>
 
+          <ComponentLabel name="IliaTestimonial" note="Pull-quote testimonials + press mentions" />
           <IliaTestimonial />
 
+          <ComponentLabel name="Newsletter" note="Email capture form (shared)" />
           <Newsletter
             heading="Join the ILIA list"
             description="Get early access to launches and a welcome discount on your first order."
@@ -155,10 +176,14 @@ function Home() {
             </p>
           </div>
 
+          <ComponentLabel name="VahdamHeader" note="Logo, tea-category navigation, search + account + cart" />
           <VahdamHeader />
+
+          <ComponentLabel name="AnnouncementBar" note="Looping tiered-discount message strip (shared)" />
           <AnnouncementBar messages={vahdamAnnouncement} style={{ borderColor: 'var(--vahdam-border)' }} />
 
           <div className="page-section">
+            <ComponentLabel name="VahdamHero" note="Rotating promotional hero with primary CTA" />
             <VahdamHero />
           </div>
 
@@ -166,10 +191,18 @@ function Home() {
             <div style={{ padding: '0 var(--space-lg)', maxWidth: 'var(--max-width)', margin: '0 auto' }}>
               <SectionHeader eyebrow="Shop by Category" title="Four core collections" />
             </div>
+            <ComponentLabel
+              name="VahdamCategoryNav"
+              note="Four-tile category grid — renders shared CategoryTile, PlaceholderImage"
+            />
             <VahdamCategoryNav />
           </div>
 
           <div className="page-section">
+            <ComponentLabel
+              name="VahdamCollectionSection"
+              note="Scrollable collection row — renders shared ProductCard, PlaceholderImage, Badge, Rating, Button"
+            />
             <VahdamCollectionSection
               title="Best Sellers"
               description="Top-reordered blends across the current catalog."
@@ -181,10 +214,15 @@ function Home() {
             <div style={{ padding: '0 var(--space-lg)', maxWidth: 'var(--max-width)', margin: '0 auto' }}>
               <SectionHeader eyebrow="Trust Signals" title="Scale and credibility at a glance" />
             </div>
+            <ComponentLabel name="FeatureGrid" note="Icon/stat + title + description grid (shared)" />
             <FeatureGrid items={vahdamTrustStats} />
           </div>
 
           <div className="page-section">
+            <ComponentLabel
+              name="VahdamStorySection"
+              note="Founder/heritage editorial split — renders shared PlaceholderImage, Button"
+            />
             <VahdamStorySection />
           </div>
 
@@ -192,11 +230,14 @@ function Home() {
             <div style={{ padding: '0 var(--space-lg)', maxWidth: 'var(--max-width)', margin: '0 auto' }}>
               <SectionHeader eyebrow="Impact" title="Sourcing commitments behind every estate" />
             </div>
+            <ComponentLabel name="FeatureGrid" note="Icon + title + description grid (shared)" />
             <FeatureGrid items={vahdamValues} />
           </div>
 
+          <ComponentLabel name="VahdamTestimonial" note="Customer quote cards" />
           <VahdamTestimonial />
 
+          <ComponentLabel name="Newsletter" note="Email capture form (shared)" />
           <Newsletter
             heading="Subscribe for harvest updates"
             description="Occasional notes on new arrivals and limited single-estate batches."
@@ -213,6 +254,7 @@ function Home() {
               description="A quick reference to which components belong to each brand section, and which pieces are shared across both."
             />
           </div>
+          <ComponentLabel name="ComponentMap" note="ILIA / VAHDAM / Shared component groupings" />
           <ComponentMap />
         </section>
 
@@ -225,10 +267,12 @@ function Home() {
               description="The process used to move from live reference sites to this single-page React application."
             />
           </div>
+          <ComponentLabel name="Workflow" note="Research-to-deployment step sequence" />
           <Workflow />
         </section>
       </main>
 
+      <ComponentLabel name="SiteFooter" note="Project name, references, technology, documentation links" />
       <SiteFooter />
     </>
   )

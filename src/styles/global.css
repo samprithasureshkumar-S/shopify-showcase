@@ -196,6 +196,26 @@ input:focus-visible {
   color: var(--vahdam-text);
 }
 
+/* ---------- Component Label (presentation-only annotation) ---------- */
+
+.component-label {
+  max-width: var(--max-width);
+  margin: var(--space-lg) auto var(--space-xs);
+  padding: 0 var(--space-lg);
+  font-size: 0.72rem;
+  color: var(--color-muted);
+}
+
+.component-label code {
+  font-family: 'SFMono-Regular', Menlo, Consolas, monospace;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.component-label__note {
+  opacity: 0.8;
+}
+
 /* ---------- Section Header (shared) ---------- */
 
 .section-header {
